@@ -40,21 +40,21 @@ const ContactPage = () => {
                 <MapPin size={24} className="text-blue-500 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold">Our Office</h3>
-                  <p className="text-gray-600">123 Construction Avenue, Dubai, UAE</p>
+                  <p className="text-gray-600">Post Box: 81082, Dubai, UAE</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Mail size={24} className="text-blue-500 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold">Email Us</h3>
-                  <p className="text-gray-600">info@asgc.ae</p>
+                  <p className="text-gray-600">info@advancegeneral.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Phone size={24} className="text-blue-500 mt-1" />
                 <div>
                   <h3 className="text-lg font-semibold">Call Us</h3>
-                  <p className="text-gray-600">+971 4 123 4567</p>
+                  <p className="text-gray-600">+971 4 267 3633</p>
                 </div>
               </div>
             </div>

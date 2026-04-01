@@ -2,22 +2,23 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import ProductSectors from '../components/ProductSectors';
+import GooeyNav from '../components/GooeyNav';
 
 const heroSlides = [
   {
-    title: 'Premium Architectural & Industrial Products',
-    subtitle: 'Your trusted source for high-quality lights, steels, interior finishes, and hardware components.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=2070'
+    title: 'Let’s Build Something Best Together',
+    subtitle: 'Advance Group: Providing quality solutions & supplies to the construction and medical industry for over 20 years.',
+    image: '/images/CorporateConstruction%20Image.jpg'
   },
   {
-    title: 'Illuminating Your Vision',
-    subtitle: 'Discover our curated selection of architectural and commercial lighting solutions.',
-    image: 'https://images.unsplash.com/photo-1429497419816-9ca5cfb4571a?auto=format&fit=crop&q=80&w=2071'
+    title: 'Fabae Lighting Solutions',
+    subtitle: 'Energy-efficient sustainable, smart lighting to empower the world.',
+    image: '/images/Smart%20Lighting%20Image.jpg'
   },
   {
-    title: 'The Foundation of Quality',
-    subtitle: 'High-grade structural steels and components for projects that are built to last.',
-    image: 'https://images.unsplash.com/photo-1511068797325-6083f0f872b1?auto=format&fit=crop&q=80&w=2070'
+    title: 'Advance City Steel Contracting',
+    subtitle: 'Building superior, smarter and complex steel structure works across the Middle East.',
+    image: '/images/Steel%20Structure%20Image.jpg'
   }
 ];
 
@@ -82,17 +83,23 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2">
-            <img src="https://images.unsplash.com/photo-1593106578502-28fa747bca65?auto=format&fit=crop&q=80&w=1935" alt="Sustainability" className="rounded-lg shadow-2xl"/>
+            <img src="/images/Office%20Photo.jpg" alt="Advance Group Office" className="rounded-lg shadow-2xl"/>
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl font-bold mb-4">Commitment to Quality</h2>
-            <p className="text-lg text-gray-600 mb-6">We are dedicated to sourcing and providing products that meet the highest standards of quality, durability, and performance, ensuring lasting value for our clients.</p>
-            <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105">
-              Learn More
+            <h2 className="text-3xl font-bold mb-4">A Legacy of Excellence</h2>
+            <p className="text-lg text-gray-600 mb-6">With over 20 years of experience, Advance Group has built a reputation for providing superior technical solutions and high-quality products. We value strong, long-term relationships and strive for complete customer satisfaction in every project.</p>
+            <button 
+              onClick={() => window.location.href='/about'}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform transform hover:scale-105"
+            >
+              Our History
             </button>
           </div>
         </div>
       </section>
+
+      {/* Floating Gooey Nav */}
+      <GooeyNav />
     </div>
   );
 };

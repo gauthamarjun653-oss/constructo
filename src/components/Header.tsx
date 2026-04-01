@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-md">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-12">
         <div className="flex items-center justify-between h-24">
           <Link to="/" className="flex items-center" aria-label="AdVance Group Home">
             <AdvanceLogo className="h-16 w-auto text-gray-900" />

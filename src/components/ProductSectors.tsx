@@ -8,21 +8,21 @@ const sectors = [
     id: 'lights',
     title: 'Lights',
     icon: <Lightbulb className="w-6 h-6" />,
-    image: '/images/lights.jpg',
+    image: '/images/modern%20LED.jpg',
     color: 'bg-blue-900/90'
   },
   {
     id: 'steels',
     title: 'Steels',
     icon: <Layers className="w-6 h-6" />,
-    image: '/images/steels.jpg',
+    image: '/images/steel.jpg',
     color: 'bg-green-600/90'
   },
   {
     id: 'interior',
     title: 'Interior Design',
     icon: <Palette className="w-6 h-6" />,
-    image: '/images/interior.jpg',
+    image: '/images/Interior%20Design.jpg',
     color: 'bg-blue-900/90'
   },
   {
@@ -47,7 +47,7 @@ const SectorCard = ({ sector }: { sector: typeof sectors[0] }) => {
 
   return (
     <div
-      onClick={() => navigate(`/sectors/${sector.id}`)}
+      onClick={() => navigate(`/sector/${sector.id}`)}
       onMouseMove={handleMouseMove}
       className="group relative flex h-[450px] w-full flex-col justify-end overflow-hidden rounded-3xl border border-gray-200 bg-gray-900/10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-shadow duration-500 cursor-pointer"
     >

@@ -30,7 +30,7 @@ const AdvanceLogo: React.FC<AdvanceLogoProps> = ({ className = "h-12 w-auto", te
       <text x="5" y="55" fontSize="48" className="logo-text" letterSpacing="-1">Ad</text>
 
       {/* The iconic 'V' with the orange circle */}
-      <g transform="translate(70, 0)">
+      <g transform="translate(62, 0)">
         {/* Orange Circle */}
         <circle cx="28" cy="18" r="10" fill="#f17600" />
         {/* V Shape */}
@@ -41,10 +41,10 @@ const AdvanceLogo: React.FC<AdvanceLogoProps> = ({ className = "h-12 w-auto", te
       </g>
 
       {/* Main Text: ance */}
-      <text x="125" y="55" fontSize="48" className="logo-text" letterSpacing="-1">ance</text>
+      <text x="112" y="55" fontSize="48" className="logo-text" letterSpacing="-1">ance</text>
 
       {/* Text: GROUP */}
-      <text x="250" y="55" fontSize="22" className="logo-light" letterSpacing="1">GROUP</text>
+      <text x="230" y="55" fontSize="22" className="logo-light" letterSpacing="1">GROUP</text>
 
       {/* The Multi-Colored Underline */}
       <g transform="translate(5, 62)">
@@ -52,7 +52,7 @@ const AdvanceLogo: React.FC<AdvanceLogoProps> = ({ className = "h-12 w-auto", te
         <rect x="30" y="0" width="65" height="4" fill="#23b14d" />
         <rect x="95" y="0" width="40" height="4" fill="#00a2e8" />
         <rect x="135" y="0" width="30" height="4" fill="#ffc90e" />
-        <rect x="165" y="0" width="80" height="4" fill="#ed1c24" />
+        <rect x="165" y="0" width="60" height="4" fill="#ed1c24" />
       </g>
 
       {/* Subtitle: MIDDLE EAST & INDIA */}

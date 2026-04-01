@@ -3,9 +3,9 @@ import { motion, useInView, useMotionValue, useTransform, animate } from 'framer
 import { Building, Users, Award } from 'lucide-react';
 
 const milestones = [
-  { icon: <Building size={40} className="text-blue-500" />, value: 1000, suffix: '+', label: 'Products Stocked' },
+  { icon: <Building size={40} className="text-blue-500" />, value: 20, suffix: '+', label: 'Years Experience' },
   { icon: <Users size={40} className="text-blue-500" />, value: 500, suffix: '+', label: 'Satisfied Clients' },
-  { icon: <Award size={40} className="text-blue-500" />, value: 20, suffix: '+', label: 'Industry Partners' },
+  { icon: <Award size={40} className="text-blue-500" />, value: 6, suffix: '+', label: 'Specialized Divisions' },
 ];
 
 const CountUp = ({ to, suffix }: { to: number; suffix: string }) => {
@@ -56,12 +56,12 @@ const AboutPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Journey</h2>
             <p className="text-gray-600 mb-4">
-              Founded with a vision to supply the construction industry with superior products, AdVance Group has become a leading name in specialized building materials. We are dedicated to sourcing and providing the highest quality lights, steels, interior finishes, and hardware components.
+              Advance Group of companies is one of the active players in the Middle East region providing quality solutions & supplies to the construction and medical industry through its divisions focused in sectors like Steel Construction, Interior Decor, Lighting solutions, Fibre Optics Lighting & Medical Equipment’s Supply and Industrial Supplies with an excellent track record for providing the best Client satisfaction for the last 20 years.
             </p>
             <p className="text-gray-600">
-              Our mission is to empower architects, designers, and builders by offering a curated selection of products that meet the most demanding standards of quality, performance, and aesthetics. We believe in building lasting relationships based on trust and reliability.
+              We have a dedicated team with extensive technical knowledge and experience in supporting lighting and structural requirements for all kinds of commercial and industrial projects. We value strong, long-term relationships and strive for customer satisfaction.
             </p>
           </motion.div>
           <motion.div
@@ -71,7 +71,7 @@ const AboutPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070" alt="Our Team" className="w-full h-full object-cover" />
+            <img src="/images/Office%20Photo.jpg" alt="Advance Group Team" className="w-full h-full object-cover" />
           </motion.div>
         </div>
       </section>
