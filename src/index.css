@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Local Poppins Font Definitions */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/poppins/v24/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/poppins/v24/pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/poppins/v24/pxiGyp8kv8JHgFVrLPTucHtAOvWDSA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/poppins/v24/pxiDyp8kv8JHgFVrJJLm21lVF9eOYktMqg.woff2') format('woff2');
+}
+
+:root {
+  --font-heading: 'Poppins', sans-serif;
+  --font-paragraph: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-paragraph);
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}

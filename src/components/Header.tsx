@@ -1,68 +1,70 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import AdvanceLogo from './AdvanceLogo';
 
-export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const navLinks = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/products', label: 'Products' },
+  { to: '/projects', label: 'Projects' },
+  { to: '/contact', label: 'Contact' },
+];
 
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' }
-  ];
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-heading font-bold text-accent">ASGC</span>
+    <header className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm z-50 shadow-md">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-24">
+          <Link to="/" className="flex items-center" aria-label="AdVance Group Home">
+            <AdvanceLogo className="h-16 w-auto text-gray-900" />
           </Link>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="text-foreground hover:text-primary transition-colors duration-200 font-medium"
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) =>
+                  `text-lg font-medium transition-colors duration-300 ${
+                    isActive ? 'text-blue-600' : 'text-gray-600 hover:text-blue-500'
+                  }`
+                }
               >
-                {link.name}
-              </Link>
+                {link.label}
+              </NavLink>
             ))}
           </nav>
-
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-gray-800">
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-border">
+      </div>
+      {isOpen && (
+        <div className="md:hidden bg-white">
+          <nav className="flex flex-col items-center space-y-4 py-4">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className="block py-3 text-foreground hover:text-primary transition-colors duration-200 font-medium"
-                onClick={() => setIsMenuOpen(false)}
+              <NavLink
+                key={link.to}
+                to={link.to}
+                onClick={() => setIsOpen(false)}
+                className={({ isActive }) =>
+                  `text-lg font-medium transition-colors duration-300 ${
+                    isActive ? 'text-blue-600' : 'text-gray-600 hover:text-blue-500'
+                  }`
+                }
               >
-                {link.name}
-              </Link>
+                {link.label}
+              </NavLink>
             ))}
           </nav>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
-}
+};
+
+export default Header;
